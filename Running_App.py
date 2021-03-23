@@ -59,22 +59,14 @@ while True:
     # x = len(table_of_distance)
     # print(x)
 
-    while True:
-        print('                         +++++ TABLE OF SCORES +++++')
-        width = 76
-        print("-" * width)
-        print("| Distance(km) |     Time     |    Pace/km   |   Calories   |     Date     |")
-        print("*" * width)
-        print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[0]), table_of_time[0], table_of_pace[0] , str(table_of_calories[0]), str(table_of_date[0])))
-        print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[1]), table_of_time[1], table_of_pace[1] , str(table_of_calories[1]), str(table_of_date[1])))
-        print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[2]), table_of_time[2], table_of_pace[2] , str(table_of_calories[2]), str(table_of_date[2])))
-        print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[3]), table_of_time[3], table_of_pace[3] , str(table_of_calories[3]), str(table_of_date[3])))
-        print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[4]), table_of_time[4], table_of_pace[4] , str(table_of_calories[4]), str(table_of_date[4])))
-        print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[5]), table_of_time[5], table_of_pace[5] , str(table_of_calories[5]), str(table_of_date[5])))
-        print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[6]), table_of_time[6], table_of_pace[6] , str(table_of_calories[6]), str(table_of_date[6])))
-        print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[7]), table_of_time[7], table_of_pace[7] , str(table_of_calories[7]), str(table_of_date[7])))
-        print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[8]), table_of_time[8], table_of_pace[8] , str(table_of_calories[8]), str(table_of_date[8])))
-        print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[9]), table_of_time[9], table_of_pace[9] , str(table_of_calories[9]), str(table_of_date[9])))
+
+    print('                         +++++ TABLE OF SCORES +++++')
+    width = 76
+    print("-" * width)
+    print("| Distance(km) |     Time     |    Pace/km   |   Calories   |     Date     |")
+    print("*" * width)
+    for idx in range(0, len(table_of_date)):
+        print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[idx]), table_of_time[idx], table_of_pace[idx] , str(table_of_calories[idx]), str(table_of_date[idx])))
         # print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format('two', "", "", '', ''))
         # print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format('three', "", "", '', ''))
         # print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format('four', "", "", '', ''))
