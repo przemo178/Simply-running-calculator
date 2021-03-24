@@ -1,4 +1,5 @@
 import datetime
+import sys
 
 date_and_time = datetime.datetime.now()
 
@@ -7,6 +8,24 @@ table_of_time = []
 table_of_pace = []
 table_of_calories = []
 table_of_date = []
+
+def quit_or_resume():
+    while True:
+        quit_resume = input('Do you want to put next score Y/N?: ')
+
+        if quit_resume == 'y' or quit_resume == 'Y':
+            print()
+            # print('Put next score!\n')
+            break
+        elif quit_resume == 'n' or quit_resume == 'N':
+            print()
+            print('Bye Bye!\n')
+            sys.exit(0)
+        while True:
+            if quit_resume != 'y' or quit_resume != 'Y' or quit_resume != 'n' or quit_resume != 'N':
+                break
+
+
 
 print('###')
 print('     Actual datetime is: ' + date_and_time.strftime('%H:%M %p | %d-%m-%Y'))
@@ -23,8 +42,6 @@ while True:
     time2 = int(input('Enter time (min): '))
     time3 = int(input('Enter time (sec): '))
 
-    # running_pace()
-    # def running_pace():
     hours_sec = time1 * 3600
     minutes_sec = time2 * 60
     sec = time3
@@ -49,15 +66,6 @@ while True:
         print('Amazing!!! Please dont stop running like today, keep going :D')
 
     print()
-    # print(total_time)
-    # print(date)
-    # print(table_of_distance)
-    # print(table_of_time)
-    # print(table_of_pace)
-    # print(table_of_calories)
-    # print(table_of_date)
-    # x = len(table_of_distance)
-    # print(x)
 
 
     print('                         +++++ TABLE OF SCORES +++++')
@@ -67,9 +75,8 @@ while True:
     print("*" * width)
     for idx in range(0, len(table_of_date)):
         print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format(str(table_of_distance[idx]), table_of_time[idx], table_of_pace[idx] , str(table_of_calories[idx]), str(table_of_date[idx])))
-        # print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format('two', "", "", '', ''))
-        # print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format('three', "", "", '', ''))
-        # print("|  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |  {:10s}  |" .format('four', "", "", '', ''))
         print("-" * width)
 
-        
+    quit_or_resume()
+    
+
